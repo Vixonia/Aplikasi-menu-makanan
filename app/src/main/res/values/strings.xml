@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">MyKopi_User</string>
+
+    <string name="hint_namalengkap">Nama Lengkap</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_nomortelpon">Nomor Telepon</string>
+    <string name="hint_jawaban">Jawab</string>
+
+    <string name="title_beranda">Beranda</string>
+    <string name="title_pesantempat">Pesan Tempat</string>
+    <string name="title_nampanku">Nampanku</string>
+    <string name="title_akun">Akun</string>
+
+
+    <string-array name="pertanyaan">
+        <item>Dimana tempat tinggal anda?</item>
+        <item>Siapa nama bapak/ibu anda?</item>
+        <item>Hewan yang pertama kali dipelihara ?</item>
+        <item>Makanan favorit anda ?</item>
+        <item>Siapa nama guru favorit anda</item>
+    </string-array>
+
+
+    <string-array name="nomormeja">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

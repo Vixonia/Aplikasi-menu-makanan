@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginRegistrasi.RegistrasiUser">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/image12"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/logomykopi"/>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#fff"
+        android:elevation="4dp"
+        android:paddingTop="15dp"
+        android:gravity="center"
+        android:layout_below="@+id/image12"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="0dp">
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Membuat Akun Baru"
+                android:paddingBottom="20dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/image12"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_nama"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtnamalengkap"
+                    android:layout_width="250dp"
+                    android:layout_height="43dp"
+                    android:layout_below="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_action_user"
+                    android:ems="10"
+                    android:hint="@string/hint_namalengkap"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorAbuabu"
+                    android:textSize="15dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_namapelamar"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtemail"
+                    android:layout_width="250dp"
+                    android:layout_height="43dp"
+                    android:layout_below="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_action_email"
+                    android:ems="10"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorAbuabu"
+                    android:textSize="15dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_pwdperusahaan"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtpassword"
+                    android:layout_width="250dp"
+                    android:layout_height="43dp"
+                    android:layout_alignLeft="@+id/txtuser"
+                    android:layout_alignStart="@+id/txtuser"
+                    android:layout_below="@+id/txtuser"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/ic_action_pwd"
+                    android:ems="10"
+                    android:hint="@string/hint_password"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorAbuabu"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_layout_jawaban"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtnotelepon"
+                    android:layout_width="250dp"
+                    android:layout_height="43dp"
+                    android:layout_alignLeft="@+id/txtuser"
+                    android:layout_alignStart="@+id/txtuser"
+                    android:layout_below="@+id/txtuser"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/ic_action_telepon"
+                    android:ems="10"
+                    android:hint="@string/hint_nomortelpon"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorAbuabu"
+                    android:textSize="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnregistrasi"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorAccent"
+                android:elevation="10dp"
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp"
+                android:text="Registrasi"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnlogin"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPutih"
+                android:elevation="10dp"
+                android:paddingLeft="90dp"
+                android:paddingRight="90dp"
+                android:text="Login"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

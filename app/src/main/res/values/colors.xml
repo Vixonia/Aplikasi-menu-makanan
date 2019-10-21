@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c71721</color>
+    <color name="colorPrimaryDark">#840b1b</color>
+    <color name="colorAccent">#ab2428</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorAbuabu">#686464</color>
+    <color name="colorKuninglogo">#fecd06</color>
+    <color name="colormerah">#ff4130</color>
+    <color name="colorTab2">#47c1ff</color>
+    <color name="colorPutih">#ffffff</color>
+    <color name="colorMerah">#f41111</color>
+    <color name="colorHijau">#16b436</color>
+    <color name="colorCokelat">#503928</color>
+
+    #f41111
+</resources>

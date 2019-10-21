@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checkout.ActivityCheckOut">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#ffffff">
+        <TextView
+            android:id="@+id/text_check_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#484747"
+            android:textSize="14sp"
+            android:text="CHECKOUT PESANAN"
+            android:textStyle="bold"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/txt_id_transaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#484747"
+            android:textSize="14sp"
+            android:text="id"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="invisible"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_list_pesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_check_out"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="#ffffff">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_transparant">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical">
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/text_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycler_cart"
+                    android:layout_marginTop="3dp"
+                    android:text="Total = Rp. "
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_toStartOf="@+id/txt_total"
+                    android:layout_marginRight="10dp"/>
+                <TextView
+                    android:id="@+id/txt_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recycler_cart"
+                    android:layout_marginTop="3dp"
+                    android:text="total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        --untuk data--
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="#ffffff"
+            android:layout_below="@id/card_list_pesanan">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_transparant">
+                <TextView
+                    android:id="@+id/text_informasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#484747"
+                    android:textSize="16sp"
+                    android:text="Informasi anda"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"/>
+                <TextView
+                    android:id="@+id/txt_id_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#484747"
+                    android:textSize="16sp"
+                    android:text="id"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/text_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_informasi"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#484747"
+                    android:textSize="15sp"
+                    android:text="Nama"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/txt_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_nama"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#484747"
+                    android:textSize="15sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_telepon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_nama"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#484747"
+                    android:textSize="15sp"
+                    android:text="Telepon"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/txt_telepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_telepon"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#484747"
+                    android:textSize="15sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="5dp"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/layout_tanggal_pemesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_info"
+            android:orientation="vertical"
+            android:background="@drawable/border_transparant"
+            android:padding="5dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#484747"
+                android:textSize="15sp"
+                android:text="Tanggal dan Jam Pemesanan"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#484747"
+                android:textSize="15sp"
+                android:text="Tanggal"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+            <EditText
+                android:id="@+id/txt_tanggal_pemesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:hint="Tanggal Pemesanan"
+                android:ems="10"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#484747"
+                android:textSize="15sp"
+                android:text="Jam"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+            <EditText
+                android:id="@+id/txt_jam_pemesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:hint="Jam Pemesanan"
+                android:ems="10"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+
+        <CheckBox
+            android:id="@+id/checkbox_tambah_catatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah catatan"
+            android:textColor="#000000"
+            android:textColorHighlight="#ffffff"
+            android:layout_below="@+id/layout_tanggal_pemesanan"
+            android:layout_marginTop="0dp"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_catatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#ffffff"
+            android:layout_below="@+id/checkbox_tambah_catatan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:visibility="visible" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_transparant"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/text_catatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14dp"
+                    android:text="Catatan tambahan"
+                    android:layout_marginLeft="5dp"/>
+                <EditText
+                    android:id="@+id/txt_catatan"
+                    android:layout_below="@+id/text_catatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        //button untuk pesan
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#ffffff"
+            android:layout_below="@+id/card_catatan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:visibility="visible" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_transparant"
+                android:padding="5dp">
+                //untuk diskon
+                <TextView
+                    android:id="@+id/txt_diskon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"
+                    android:textSize="15sp"
+                    android:text="diskon"
+                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
+                    android:layout_toStartOf="@id/text_samadengan1"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/text_samadengan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:layout_marginTop="3dp"
+                    android:textSize="15sp"
+                    android:text="="
+                    android:textStyle="bold"
+                    android:layout_marginRight="13dp"
+                    android:layout_toStartOf="@id/txt_rupiah_1"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/txt_rupiah_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Rp. "
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_toStartOf="@+id/txt_total_setelah_diskon"
+                    android:layout_marginRight="0dp"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/txt_total_setelah_diskon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"/>
+
+                //untuk grand total
+                <TextView
+                    android:id="@+id/text_grand_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:text="Grand Total = "
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:layout_toStartOf="@id/txt_rupiah_2"/>
+                <TextView
+                    android:id="@+id/txt_rupiah_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Rp. "
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_toStartOf="@+id/txt_grand_total"
+                    android:layout_marginRight="0dp" />
+                <TextView
+                    android:id="@+id/txt_grand_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="total"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <Button
+            android:id="@+id/btn_kirim_pesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_total"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Buat Pesanan"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+</ScrollView>
+

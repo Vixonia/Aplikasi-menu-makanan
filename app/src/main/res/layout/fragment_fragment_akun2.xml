@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Akun.FragmentAkun">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="7dp"
+                android:layout_margin="5dp"
+                android:background = "#00ffffff">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:clickable="true"
+                        android:elevation="5dp"
+                        android:focusable="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user"
+                        app:civ_border_color="#FFFFFFFF"
+                        app:civ_border_width="3dp"
+                        app:civ_fill_color="#efeeee" />
+                    <Button
+                        android:id="@+id/btn_simpan_gambar"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:backgroundTint="#efc770"
+                        android:layout_below="@+id/image"
+                        android:layout_centerHorizontal="true"
+                        android:text="SIMPAN"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignEnd="@+id/image"
+                        android:layout_centerVertical="true"
+                        android:elevation="6dp"
+                        android:visibility="invisible"
+                        android:layout_alignRight="@+id/image" />
+                    <TextView
+                        android:id="@+id/txt_nama_akun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_simpan_gambar"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+                        android:textColor="#000000"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:text="Nama Pengguna"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="7dp"
+            android:layout_margin="5dp"
+            android:background = "#00ffffff"
+            android:layout_below="@+id/card1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_telepon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="Telepon"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_telepon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/View3"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:text="Nomor telepon"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:textColor="#8b8a8a"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/View3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/text_telepon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="#e0e1e1" />
+                ------------------------------------------------------------
+
+                <TextView
+                    android:id="@+id/text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/View3"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="Email"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/text_email"
+                    android:layout_alignBottom="@+id/text_email"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/edit1"
+                    android:layout_toLeftOf="@id/edit1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:text="namapengguna@email.com"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:textColor="#8b8a8a"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/edit1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignEnd="@+id/View4"
+                    android:layout_alignRight="@+id/View4"
+                    android:layout_alignBottom="@+id/text_email"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:focusable="true"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/View4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/txt_email"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="#e0e1e1" />
+                ------------------------------------------------------------
+
+
+                <ImageView
+                    android:id="@+id/edit2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:visibility="gone" />
+
+
+                ------------------------------------------------------------
+
+                <TextView
+                    android:id="@+id/txt_latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:singleLine="true"
+                    android:text="lat"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_latitude"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="long"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_simpan"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#efc770"
+                    android:text="SIMPAN"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_riwayat_menu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="7dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorHijau"
+                android:background = "#00ffffff"
+                android:layout_below="@+id/card2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LIHAT RIWAYAT PEMESANAN MENU"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPutih"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_riwayat_tempat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="7dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:background = "#00ffffff"
+                app:cardBackgroundColor="@color/colorCokelat"
+                android:layout_below="@+id/card_riwayat_menu">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LIHAT RIWAYAT PEMESANAN TEMPAT"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPutih"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_below="@+id/card_riwayat_tempat"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:text="Logout" />
+
+        </RelativeLayout>
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PesanTempat.FragmentPesanTempat">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+
+            <TextView
+                android:id="@+id/text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Silahkan Inputkan Data Untuk Pesan Tempat DI MY KOPI"
+                android:textColor="#616161"
+                android:textSize="20sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_input"
+                android:paddingTop="20dp"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_input"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/namapemesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Nama   : "
+                    android:textColor="#616161"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_namapemesan"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:text=". . . . . . . . . . . . . . ."
+                    android:textColor="#616161"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_input"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nomortelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:text="No. HP : "
+                        android:textColor="#616161"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_telepon"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:text=". . . . . . . . . . . . . . ."
+                        android:textColor="#616161"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_input"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:text="Email    : "
+                        android:textColor="#616161"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:text=". . . . . . . . . . . . . . ."
+                        android:textColor="#616161"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/informasipemesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text=" Tanggal booking"
+                    android:textColor="#616161"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+                    <DatePicker
+                        android:id="@+id/datePicker1"
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_horizontal"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner" />
+
+                <TextView
+                    android:id="@+id/informasijam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:text=" Jam booking"
+                    android:textColor="#616161"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+                <TimePicker
+                    android:id="@+id/spinnerjam"
+                    android:layout_width="300dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:timePickerMode="spinner" />
+
+                <LinearLayout
+                    android:id="@+id/layoutmeja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_input"
+                    android:gravity="center"
+                    android:paddingBottom="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/nomormeja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:text="Nomor meja :"
+                        android:textColor="#616161"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                    <Spinner
+                        android:id="@+id/no_meja"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                       android:spinnerMode="dropdown"
+                        android:entries="@array/nomormeja"
+                        />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutmeja"
+                android:gravity="center"
+                android:paddingBottom="50dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnordertempat"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colormerah"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="Pesan tempat"
+                    android:textColor="@color/colorPutih"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
